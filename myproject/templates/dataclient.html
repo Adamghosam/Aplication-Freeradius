@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+
+{% block title %}Insert data{% endblock %}
+
+{% block content %}
+
+
+<!-- 
+
+
+<div class="container">
+{% with errors = get_flashed_messages(category_filter=["error"]) %}
+{% for msg in get_flashed_messages() %}
+<script>
+  // Add your JavaScript code here
+  Swal.fire(
+    '{{msg}}',
+    'You clicked the button!',
+    'success'
+  )
+</script>
+
+  {% endfor %}
+
+
+{% if errors %}
+
+    {%- for msg in errors %}
+    
+    <script>
+      Swal.fire({
+
+          icon: 'error',
+          title: 'Oops...',
+          text: ' {{ msg }}',
+      })
+    </script>
+    
+    
+   
+    {% endfor -%}
+ 
+{% endif %}
+{% endwith %} -->
+
+
+
+
+
+  
+
+
+  
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+
+        <!-- <form action="/generate_unique_number" method="post">
+          <fieldset >
+            <legend>Form Input Data Client</legend>
+            <div class="mb-3">
+              <label  class="form-label ">Nama Lengkap</label>
+              <input type="text" id="nama" name="nama" class="form-control" placeholder="Masukan Nama Lengkap" > 
+            </div>
+            <div class="mb-3">
+              <label  class="form-label ">No Telpon</label>
+              <input type="number" id="notelp" name="notelp" class="form-control" placeholder="Masukan No Whatsapp" > 
+            </div>
+            <div class="mb-3">
+              <label  class="form-label ">Alamat</label>
+              <input type="text" id="alamat" name="alamat" class="form-control" placeholder="Masukan Alamat" > 
+            </div>
+
+            
+            
+          </fieldset>
+          
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" id="tombol" class="btn btn-primary">Save</button>
+
+      </div>
+    </form> -->
+
+
+<div class="card o-hidden border-0 shadow-lg my-5">
+  <div class="card-body p-0">
+      <!-- Nested Row within Card Body -->
+      <div class="row">
+          <div class="col-lg-6 text-center">
+              <div class="p-5">
+                  <div class="text-center">
+                      <h1 class="h4 text-gray-900 mb-4">Create an Account Client!</h1>
+                  </div>
+                  <form class="user"action="/generate_unique_number" method="post">
+                      <div class="form-group row">
+                          <div class="col-sm-6 mb-3 mb-sm-0">
+                              <input type="text" class="form-control form-control-user" id="nama" name="nama"
+                                  placeholder="Nama Lengkap">
+                          </div>
+                          <div class="col-sm-6">
+                              <input type="number" class="form-control form-control-user" id="notelp" name="notelp"
+                                  placeholder="No Telpon">
+                          </div>
+                          
+                      </div>
+                      <div class="form-group">
+                          <input type="text" class="form-control form-control-user" id="alamat" name="alamat"
+                              placeholder="Alamat">
+                      </div>
+                
+                      <button type="submit" class="btn btn-primary btn-user btn-block" id="tombol">Register Account</button>
+                    
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+  
+
+<!-- tabel -->
+
+  <!-- <div class="card-body mt-4">
+    <h3>Daftar Client Hotspot</h3>
+    <table class="table table-striped rounded-0 container mt-5">
+      <tr>
+        <th scope="col">No</th>
+        <th scope="col">Noregis</th>
+        <th scope="col">Nama</th>c
+        <th scope="col">Alamat</th>
+        <th scope="col">No Telpon</th>
+        <th scope="col">Edit / Delet</th>
+      </tr>
+      {% for row in userclient %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2]}}</td>
+        <td>{{ row[3]}}</td>
+        <td>{{ row[4]}}</td>
+        <td>
+          <form id="delete-form"action="/deleteclient" method="POST">
+            <input type="hidden" name="id" value="{{ row[0] }}" >
+            <button class="btn btn-primary" type="submit">Delete</button>
+           
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div> -->
+
+<!-- tabel -->
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+

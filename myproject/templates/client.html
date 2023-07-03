@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}
+client
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="card container">
+  <div class="card-body">
+    <h3>Daftar Client Hotspot</h3>
+    <table class="table table-striped rounded-0 container mt-5">
+      <tr>
+        <th scope="col">No</th>
+        <th scope="col">Username</th>
+        <th scope="col">Password</th>
+        <th scope="col">Deadline</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+      {% for row in radcheck %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[4] }}</td>
+        <td>{{ loop.index }}</td>
+        <td>{{ loop.index }}</td>
+       
+        <td>
+          <form id="delete-form"action="/delete" method="POST">
+            <input type="hidden" name="id" value="{{ row[0] }}" >
+            <button class="btn btn-danger" type="submit">Delete</button>
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+
+
+{% endblock %} 
