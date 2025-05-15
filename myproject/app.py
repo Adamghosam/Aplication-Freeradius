@@ -12,7 +12,7 @@ app.secret_key = 'Sapiasia'
 # MySQL configuration
 app.config['MYSQL_HOST'] = '172.16.0.206'
 app.config['MYSQL_USER'] = 'Alisa'
-app.config['MYSQL_PASSWORD'] = 'Saya#190401'
+app.config['MYSQL_PASSWORD'] = '12345678'
 app.config['MYSQL_DB'] = 'radius'
 
 mysql = MySQL(app)
